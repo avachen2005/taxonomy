@@ -9,8 +9,6 @@ defmodule TaxonomyWeb.EntityResolver do
   end
 
   def create_entity(_root, args, _info) do
-
-
     V1.create_entity(args)
   end
 end

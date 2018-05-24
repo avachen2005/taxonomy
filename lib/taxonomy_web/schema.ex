@@ -3,6 +3,11 @@ defmodule TaxonomyWeb.Schema do
   use Absinthe.Schema
   alias TaxonomyWeb.EntityResolver
 
+  enum :sort_order do
+    value :asc
+    value :desc
+  end
+
   object :entity do
     field :id, non_null(:integer)
     field :key, non_null(:string)

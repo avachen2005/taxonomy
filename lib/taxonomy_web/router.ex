@@ -7,8 +7,6 @@ defmodule TaxonomyWeb.Router do
 
   scope "/", TaxonomyWeb do
     pipe_through :api
-
-
   end
 
     forward "/graphiql", Absinthe.Plug.GraphiQL,
