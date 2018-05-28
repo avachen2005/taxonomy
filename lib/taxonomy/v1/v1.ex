@@ -113,9 +113,21 @@ defmodule Taxonomy.V1 do
       [%Entity{}, ...]
 
   """
-  def list_entities do
+  # def list_entities do
+  #   Repo.all(Entity)
+  # end
+
+  def list_entities(%{matching: key}) when is_binary(key) do    
+    Entity
+    |> where([m], ilike(m.key, ^"%#{key}%"))
+    |> Repo.all
+  end
+
+  def list_entities(_) do
     Repo.all(Entity)
   end
+
+
 
   @doc """
   Gets a single entity.

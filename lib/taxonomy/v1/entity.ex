@@ -20,4 +20,5 @@ defmodule Taxonomy.V1.Entity do
     |> cast(attrs, [:key, :description, :parent_id, :type, :order, :created_at, :updated_at, :deleted_at])
     |> validate_required([:key, :type])
   end
+
 end

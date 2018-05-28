@@ -21,5 +21,4 @@ defmodule Taxonomy.Repo.Migrations.CreateTypes do
       add :deleted_at, :integer, size: 64
     end
 
-  end
 end
